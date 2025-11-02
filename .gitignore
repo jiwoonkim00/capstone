@@ -32,6 +32,7 @@ build/
 # Java / Spring
 *.class
 *.jar
+!**/gradle/wrapper/gradle-wrapper.jar
 *.war
 *.iml
 **/.gradle/
@@ -53,6 +54,7 @@ logs/
 # Env
 .env
 .env.*
+!.env.example
 faiss_store/
 *.json.bak
 *_backup.json

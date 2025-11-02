@@ -1,8 +1,10 @@
-gradle-wrapper.jar
+# gradle-wrapper.jar는 포함되어야 함 (다른 PC에서 빌드 시 필요)
+# gradle-wrapper.jar는 루트 .gitignore에서 예외 처리됨
 /.gradle
 /captures/
-/gradlew
-/gradlew.bat
+# gradlew는 Flutter가 관리하므로 제외 가능
+# /gradlew
+# /gradlew.bat
 /local.properties
 GeneratedPluginRegistrant.java
 .cxx/
