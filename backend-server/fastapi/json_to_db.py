@@ -13,7 +13,7 @@ conn = pymysql.connect(
 cursor = conn.cursor()
 
 # JSON 불러오기
-with open('recipes_fixed.json', 'r', encoding='utf-8') as f:
+with open('recipes_clean.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
 
 # 배치 커밋용 변수
