@@ -9,7 +9,12 @@ RUN pip install --no-cache-dir -r requirements.txt
 # 앱 파일 복사
 COPY ./app /app/app
 COPY build_faiss.py .
-COPY ./faiss_store /app/faiss_store
+COPY build_faiss_from_json.py .
+
+# faiss_store 폴더 생성 (빈 폴더 생성)
+# 주의: faiss_store의 실제 파일은 Git에 포함되지 않음
+# 클론 후 docker-compose exec fastapi python build_faiss.py 실행 필요
+RUN mkdir -p /app/faiss_store
 
 # GPU 환경 변수 설정
 ENV CUDA_VISIBLE_DEVICES=0
